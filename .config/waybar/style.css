@@ -1,0 +1,88 @@
+@define-color bg    #1a1b26;
+@define-color fg    #a9b1d6;
+@define-color blk   #32344a;
+@define-color red   #f7768e;
+@define-color grn   #9ece6a;
+@define-color ylw   #e0af68;
+@define-color blu   #7aa2f7;
+@define-color mag   #ad8ee6;
+@define-color cyn   #0db9d7;
+@define-color brblk #444b6a;
+@define-color wht   #ffffff;
+
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+    font-weight: 400;
+}
+
+window#waybar {
+    background-color: @bg;
+    color: @fg;
+}
+
+
+#workspaces button {
+    padding: 0 4px;
+    color: @cyn;
+    background: transparent;
+}
+
+#workspaces button.active {
+    color: @blk;
+    background-color: @mag;
+    border-radius: 0px;
+}
+
+#workspaces button.empty {
+    color: @fg;
+}
+
+#workspaces button.empty.active {
+    color: @blk;
+    background-color: @mag;
+}
+
+#workspaces button.urgent {
+    background-color: @red;
+}
+
+#window {
+    padding: 0 16px;
+    color: @fg;
+}
+
+#mpris
+{
+    padding: 0 8px;
+    color: @fg;
+}
+
+#tray,
+#battery,
+#network,
+#cpu,
+#temperature,
+#memory,
+#disk,
+#custom-clock
+{
+    padding: 0 8px;
+    color: @fg;
+}
+
+#network.disconnected {
+    color: @bg;
+    background-color: @red;
+}
+
+#tray {
+    background-color: @cyn;
+}
+
+tooltip {
+    color: @fg;
+    background-color: @bg;
+    border: 1px solid @brblk;
+}

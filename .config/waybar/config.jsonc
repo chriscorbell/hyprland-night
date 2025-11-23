@@ -1,0 +1,127 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 26,
+    "spacing": 4,
+    "modules-left": [
+        "hyprland/workspaces",
+        "mpris"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        // "tray",
+        // "network",
+        // "battery",
+        "cpu",
+        "temperature",
+        "memory",
+        "disk",
+        "custom/clock"
+    ],
+    
+    // Modules configuration
+    
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{name}",
+        "persistent-workspaces": {
+            "*": 9
+        }
+    },
+    "hyprland/window": {
+        "max-length": 100,
+        "seperate-outputs": false
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+        // "icons": {
+        //   "blueman": "bluetooth",
+        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        // }
+    },
+    "custom/clock": {
+        "exec": "echo '  '$(date +\"%A %m/%e/%Y %-I:%M %p\")",
+        "interval": 1,
+        "tooltip": false
+    },
+    "cpu": {
+        "format": "  {usage}%",
+        "interval": 1,
+        "tooltip": false
+    },
+    "memory": {
+        "format": "  {percentage}%",
+        "interval": 1,
+        "tooltip": true
+    },
+    "disk": {
+        "interval": 60,
+        "path": "/",
+        "format": "󰋊 {used}",
+        "tooltip": true,
+        "tooltip-format": "{free} free ({percentage_used}% used)"
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "BAT: {capacity}% {icon} {time}",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "Bat {capacity}%",
+        "format-time": "{H}:{M}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "network": {
+        "format": "NET:  {bandwidthUpBits}  {bandwidthDownBits}",
+        "format-disconnected": "OFFLINE ⚠",
+        "tooltip": true,
+        "tooltip-format": "{ipaddr}",
+        "interval": 1
+    },
+    "custom/sep": {
+        "format": "|",
+        "interval": 0,
+        "tooltip": false
+    },
+    "temperature": {
+        // "thermal-zone": 1,
+        // to get hwmon path, run this: for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+        // "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C ",
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": [
+            "",
+            "",
+            "",
+            ""
+        ],
+        "interval": 1,
+        "tooltip": false
+    },
+    "mpris": {
+        "format": "{player_icon} {artist} – {title}",
+        "format-paused": "{status_icon}  <i>{artist} – {title}</i>",
+        "player-icons": {
+            "default": "▶"
+        },
+        "status-icons": {
+            "paused": "⏸"
+        },
+        "tooltip": false
+        // "ignored-players": ["firefox"]
+    }
+}
