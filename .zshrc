@@ -91,6 +91,7 @@ alias cat="bat"
 alias pacf="sudo pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Si {1}' | xargs -ro yay -S"
 alias grep='grep --color=auto'
+alias gs='git status'
 alias ga='git add .'
 alias gc='git commit -m'
 alias gp='git push origin main'
