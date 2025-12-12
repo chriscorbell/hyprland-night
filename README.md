@@ -10,3 +10,9 @@ Or alternatively, I have written a script that will install my dotfiles along wi
 ```
 curl https://raw.githubusercontent.com/chriscorbell/hyprland-tokyonight/main/install.sh | bash
 ```
+
+## Easy Mode
+- Install Arch Linux with the `archinstall` script without selecting any profile (minimal install)
+- Run [shuttle](https://github.com/chriscorbell/shuttle)
+- Install the dotfiles with the curl command above
+- Reboot
