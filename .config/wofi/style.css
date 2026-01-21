@@ -1,7 +1,7 @@
-@define-color bg     #1a1b26;
-@define-color bg2    #444b6a; 
-@define-color txt    #a9b1d6; 
-@define-color accent #7aa2f7; 
+@define-color bg     #1c1c1c;
+@define-color bg2    #444444; 
+@define-color txt    #dcdcdc; 
+@define-color accent #dcdcdc;
 
 * {
     font-family: Inter;
@@ -12,15 +12,15 @@
  /* Window */
  window {
     margin: 0px;
-    padding: 10px;
+    padding: 4px;
     border-radius: 10px;
     background-color: @bg;
  }
 
  /* Inner Box */
  #inner-box {
-    margin: 5px;
-    padding: 10px;
+    margin: 4px;
+    padding: 4px;
     border: none;
     border-radius: 5px;
     background-color: @bg;
@@ -28,8 +28,8 @@
 
  /* Outer Box */
  #outer-box {
-    margin: 5px;
-    padding: 10px;
+    margin: 4px;
+    padding: 4px;
     border: none;
     background-color: @bg;
     border-radius: 5px;
@@ -38,14 +38,14 @@
  /* Scroll */
  #scroll {
     margin: 0px;
-    padding: 10px;
+    padding: 4px;
     border: none;
  }
 
  /* Input */
  #input {
-    margin: 5px;
-    padding: 10px;
+    margin: 4px;
+    padding: 4px;
     border: none;
     color: @txt;
     background-color: @bg;
@@ -54,8 +54,8 @@
 
  /* Text */
  #text {
-    margin: 5px;
-    padding: 10px;
+    margin: 4px;
+    padding: 4px;
     border: none;
     color: @txt;
  }
@@ -63,12 +63,12 @@
  /* Selected Entry */
  #entry:selected {
    background-color: @bg;
-   outline: 1px solid @accent;
+   outline: 2px solid @accent;
  }
 
  #entry:selected #text {
     color: @txt;
  }
  image {
-   margin-left: 10px;
+   margin-left: 4px;
  }

@@ -1,8 +1,8 @@
 ## Instructions
 
 ```bash
-git clone https://github.com/chriscorbell/hyprland-tokyonight
-cd hyprland-tokyonight
+git clone https://github.com/chriscorbell/hyprland-night
+cd hyprland-night
 cp -r .config ~/
 cp -r walls ~/
 ```
@@ -11,7 +11,7 @@ Or alternatively, I have written a script that will install my dotfiles along wi
 curl https://raw.githubusercontent.com/chriscorbell/hyprland-tokyonight/main/install.sh | bash
 ```
 
-## Easy Mode
+## Easy Mode on a Fresh Arch Install
 - Install Arch Linux with the `archinstall` script without selecting any profile (minimal install)
 - Run [shuttle](https://github.com/chriscorbell/shuttle)
 - Install the dotfiles with the curl command above
