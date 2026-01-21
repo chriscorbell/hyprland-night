@@ -2,7 +2,7 @@
 
 clear
 
-echo -e "${MAGENTA}"
+echo -e "${CYAN}"
 cat << "EOF"
 
       .__                        .__                     .___      
